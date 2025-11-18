@@ -1,4 +1,3 @@
-/*General Reset*/
 * {
     margin: 0 0;
     padding: 0 0;
@@ -15,6 +14,10 @@ header {
     display: flex;
     justify-content: space-between;
     border-bottom:  1px solid red;
+}
+
+section {
+    padding: 50px;
 }
 
 header .logo {
@@ -59,32 +62,33 @@ main #inicio img {
 
 main #artistas {
     margin-top: 100px;
-    padding: 100px;
+    padding: 50px;
 }
 
 main #artistas #artistas-card {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    overflow-x: hidden;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 main #artistas div img {
     width: 377px;
     height: 500px;
+    border-radius: 20px;
 }
 
 main .artista {
     display: flex;
 
     flex-direction: column;
-    width: 30%;
     margin: 0 20px;
 }
 
 main .artista div {
-    margin-top: -100px;
+    margin-top: -95px;
     background: #111;
+    border-radius: 0px 0px 20px 20px;
     opacity: 0.8;
     width: 100%;
     height: 19%;
@@ -94,39 +98,227 @@ main .artista div {
 
 main .title {
     color: #892224;
+    margin-bottom: 50px;
 }
 
-main #noticias-card{
-    margin-top: 100px;
-    padding: 100px;
+.btn-vermais {
+    padding: 5px 20px;
+    height: 40px;
+    font-weight: bold;
+    color: white;
+    background: #892224;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-main #noticias #noticias-card {
+.header-section {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    overflow-x: hidden;
 }
-main #noticias-card article img {
-    width: 377px;
-    height: 500px;
-}
-main .noticias-card {
-    display: flex;
 
-    flex-direction: column;
-    width: 30%;
-    margin: 0 20px;
+#sobre-nos .conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-main .noticias-card article {
-    margin-top: -100px;
-    background: #111;
-    opacity: 0.8;
-    width: 100%;
-    height: 19%;
-    overflow-y: hidden;
-    padding: 30px 25px;
+
+#sobre-nos img {
+    width: 667px;
+    object-fit: cover;
+    object-position: center;
+    height: 499px;
+    border-radius: 20px;
 }
-main .titleN {
+
+.sobre-nos-div-texto {
+    width: 600px;
+    margin: 50px;
+    font-size: 20px;
+    text-align: justify;
+    
+    display: flex;
+    align-items: center;
+}
+
+.red-text {
     color: #892224;
+    font-weight: bold;
+}
+
+.noticias-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+}
+
+.noticia {
+    width: 500px;
+    position: relative; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noticia img {
+    width: 100%; 
+    height: 100%;
+    display: block; 
+    transition: transform 0.3s ease; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.noticia img:hover {
+    transform: scale(1.05);
+}
+
+.noticia div {
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+
+    background-color: rgba(0, 0, 0, 0.7); 
+    
+    color: white; 
+    padding: 15px;
+    box-sizing: border-box; 
+
+    transition: background-color 0.3s ease;
+}
+
+.lancamentos-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px; 
+}
+
+.lancamento {
+    width: 500px;
+    height: 1000px;
+    position: relative; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lancamento img {
+    width: 100%; 
+    height: 100%;
+    display: block; 
+    transition: transform 0.3s ease; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.lancamento img:hover {
+    transform: scale(1.05);
+}
+
+.lancamento div {
+    position: absolute; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+
+    background-color: rgba(0, 0, 0, 0.7); 
+    
+    color: white; 
+    padding: 15px;
+    box-sizing: border-box; 
+
+    transition: background-color 0.3s ease;
+}
+
+#contato {
+    display: flex;
+    width: 100%;
+    background: #892224;
+    justify-content: center;
+    gap: 200px;
+}
+
+.contato-title {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contato-form {
+    display: flex;
+    width: 600px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.contato-input {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contato-input input {
+    width: 100%;
+
+
+    height: 40px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contato-input textarea {
+    width: 100%;
+
+
+    height: 100px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.contato-form button {
+    width: 100%;
+    height: 50px;
+
+    background-color: #161917;
+    color: #fff;
+    border-radius: 10px;
+    
+}
+.contato-form button:hover {
+    background-color: #111;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    background-color: #161917;
+    border-top: 1px solid #892224;
+
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .links ul li {
+    list-style: none;
+    margin: 10px;
+}
+footer .links ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+footer .links ul li a:hover {
+    color: #892224;
+}
+
+footer .copy {
+    align-self: flex-end;
 }
