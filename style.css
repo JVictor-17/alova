@@ -1,3 +1,4 @@
+/*General Reset*/
 * {
     margin: 0 0;
     padding: 0 0;
@@ -53,6 +54,7 @@ main #inicio {
 main #inicio img {
     width: 100%;
     height: 1000px;
+    transform: scaleX(-1);
 }
 
 main #artistas {
@@ -91,5 +93,40 @@ main .artista div {
 }
 
 main .title {
+    color: #892224;
+}
+
+main #noticias-card{
+    margin-top: 100px;
+    padding: 100px;
+}
+
+main #noticias #noticias-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+main #noticias-card article img {
+    width: 377px;
+    height: 500px;
+}
+main .noticias-card {
+    display: flex;
+
+    flex-direction: column;
+    width: 30%;
+    margin: 0 20px;
+}
+main .noticias-card article {
+    margin-top: -100px;
+    background: #111;
+    opacity: 0.8;
+    width: 100%;
+    height: 19%;
+    overflow-y: hidden;
+    padding: 30px 25px;
+}
+main .titleN {
     color: #892224;
 }
